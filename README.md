@@ -1,6 +1,6 @@
 # Tri
 
-This is a todo tutorial I put together as part of this workshop - <https://spf13.com/presentation/building-an-awesome-cli-app-in-go-oscon/>.
+This is a todo tutorial I put together as part of this workshop - <https://spf13.com/presentation/building-an-awesome-cli-app-in-go-oscon/>. As I did this almost a decade after the workshop was published, I had to work through some differences in how it was presented, but I was able to get everything to work.
 
 ## Usage
 
@@ -25,3 +25,19 @@ Either of those configurations can work. Now you can run the command
 ```
 
 That will print out usage statement for the command. You can pass in the `--help` flag into all the subcommands as well to learn more about how they work.
+
+## Development
+
+If you want to add a new subcommand, make sure you have the cobra-cli installed -
+
+```shell
+go install github.com/spf13/cobra-cli@latest
+```
+
+Then add your new command by using this command:
+
+```shell
+cobra-cli add <your new command>
+# example
+cobra-cli add find
+```
